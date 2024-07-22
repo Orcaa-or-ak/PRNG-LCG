@@ -25,12 +25,6 @@ The Java implementation of the LCG is encapsulated in a class named `LinearCongr
 
 ### Class: `LinearCongruentialGenerator`
 
-- **Fields**:
-  - `private long a;`
-  - `private long c;`
-  - `private long m;`
-  - `private long seed;`
-
 - **Constructor**:
   ```java
   public LinearCongruentialGenerator(long a, long c, long m, long seed) {
