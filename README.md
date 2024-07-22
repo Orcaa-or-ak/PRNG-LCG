@@ -7,7 +7,9 @@ This project demonstrates the implementation of a Linear Congruential Generator 
 
 The LCG algorithm is defined by the recurrence relation:
 
-\[ X_{n+1} = (a \cdot X_n + c) \mod m \]
+$$
+X_{n+1} = (a \cdot X_n + c) \mod m
+$$
 
 Where:
 - \(X\) is the sequence of pseudorandom values,
