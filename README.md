@@ -91,4 +91,4 @@ The default parameters used in this implementation are:
 - Multiplier (`a`): 1664525
 - Increment (`c`): 1013904223
 - Modulus (`m`): \(2^{32}\)
-- Initial seed (`seed`): 42
+- Initial seed  $\(X_0\)$ (`seed`): 42
