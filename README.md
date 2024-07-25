@@ -12,12 +12,12 @@ X_{n+1} = (a \cdot X_n + c) \mod m
 $$
 
 Where:
-- $X$ is the sequence of pseudorandom values,
+- $X$ is the sequence of pseudorandom values.
 - $X_0$ is the seed or starting value.
-- $X_{n+1}$ is the next number in sequence,
-- $a$ is the multiplier,
-- $c$ is the increment,
-- $m$ is the modulus,
+- $X_{n+1}$ is the next number in sequence.
+- $a$ is the multiplier.
+- $c$ is the increment.
+- $m$ is the modulus.
 
 ## Implementation
 
