@@ -21,7 +21,7 @@ Where:
 
 ## Implementation
 
-The Java implementation of the LCG is encapsulated in a class named `LinearCongruentialGenerator`.
+The Java implementation of the LCG is encapsulated in a class named `LinearCongruentialGenerator`. The BigInteger class of the java.math package is used to handle large integer and the SecureRandom class of the java.security package is used to generates strong numbers. These two classes are suitale for cryptographic purposes.
 
 ### Class: `LinearCongruentialGenerator`
 
