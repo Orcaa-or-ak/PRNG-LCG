@@ -64,11 +64,3 @@ public static void main(String[] args) {
 ```
 
 This will generate and print 10 pseudorandom numbers based on the LCG algorithm.
-
-## Parameters
-
-The default parameters used in this implementation are:
-- Multiplier (`a`): 1664525
-- Increment (`c`): 1013904223
-- Modulus (`m`): \(2^{32}\)
-- Initial seed  $\(X_0\)$ (`seed`): 42
