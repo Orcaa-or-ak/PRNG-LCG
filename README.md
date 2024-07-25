@@ -1,7 +1,7 @@
 
 # Linear Congruential Generator (LCG)
 
-This project demonstrates the implementation of a Linear Congruential Generator (LCG) in Java. LCG is a simple and classic Pseudorandom-Number Generator algorithm.
+This project demonstrates the implementation of a Linear Congruential Generator (LCG) in Java.
 
 ## Overview
 
