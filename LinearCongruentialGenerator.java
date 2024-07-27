@@ -23,7 +23,7 @@ public class LinearCongruentialGenerator {
         SecureRandom secureRandom = new SecureRandom();
 
         // Generate parameters for the LCG
-        int bitLength = 1024;
+        int bitLength = 2048;
         BigInteger a = new BigInteger(bitLength, secureRandom);
         BigInteger c = new BigInteger(bitLength, secureRandom);
         BigInteger m = BigInteger.probablePrime(bitLength, secureRandom);
@@ -36,16 +36,34 @@ public class LinearCongruentialGenerator {
 
         // Generate and print 10 random numbers along with CPU, RAM, and time cost
         for (int i = 0; i < 10; i++) {
+            // Measure start time and memory usage
             long startTime = System.nanoTime();
-            BigInteger randomNumber = lcg.next();
+            long startMemory = runtime.totalMemory() - runtime.freeMemory();
+
+            // Generate 1000 random numbers
+            for (int z = 0; z < 1000; z++) {
+                lcg.next();
+            }
+            
+            // Measure end time and memory usage
             long endTime = System.nanoTime();
-            double timeTakenMs = (endTime - startTime) / 1_000_000.0;
-            double usedMemoryMb = (runtime.totalMemory() - runtime.freeMemory()) / (1024.0 * 1024.0);
+            long endMemory = runtime.totalMemory() - runtime.freeMemory();
+            
+            // Calculate total time taken and memory used
+            double totalTimeTakenMs = (endTime - startTime) / 1_000_000.0;
+            long totalUsedMemoryBytes = endMemory - startMemory;
+
+            // Calculate average time and memory used per number
+            double averageTimeTakenMs = totalTimeTakenMs / 1000;
+            double averageUsedMemoryBytes = totalUsedMemoryBytes / 1000.0;
+
+            // Generate one final random number to print
+            BigInteger randomNumber = lcg.next();
 
             System.out.println("Random Number: " + randomNumber);
             System.out.println("Bit Length: " + randomNumber.bitLength());
-            System.out.println("Time taken: " + timeTakenMs + " ms");
-            System.out.println("Used Memory: " + usedMemoryMb + " MB");
+            System.out.println("Average Time taken: " + averageTimeTakenMs + " ms");
+            System.out.println("Average Used Memory: " + averageUsedMemoryBytes + " Bytes");
             System.out.println();
         }
     }
